@@ -1,7 +1,0 @@
-{
-  "name": "clawdbot-skill-situation-monitor",
-  "version": "1.0.0",
-  "devDependencies": {
-    "typescript": "^5.0.0"
-  }
-}
