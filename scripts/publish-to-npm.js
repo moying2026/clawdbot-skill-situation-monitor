@@ -8,7 +8,7 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const axios = require('axios');
+
 
 // 配置
 const CONFIG = {
