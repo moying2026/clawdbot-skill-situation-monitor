@@ -5,13 +5,13 @@
   "main": "src/index.ts",
   "types": "src/index.ts",
   "scripts": {
-    "build": "echo '构建跳过 - 依赖问题待解决'",
-    "test": "echo '测试跳过 - 依赖问题待解决'",
-    "lint": "echo '代码检查跳过 - 依赖问题待解决'",
-    "release": "echo '版本管理跳过 - 依赖问题待解决'",
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "release": "standard-version",
     "publish:github": "node scripts/publish-simple.js github",
     "publish:npm": "node scripts/publish-simple.js npm",
-    "deploy": "echo '部署跳过 - 依赖问题待解决'"
+    "deploy": "node scripts/deploy-minimal.js"
   },
   "keywords": [
     "clawdbot",
