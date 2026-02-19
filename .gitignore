@@ -1,0 +1,75 @@
+# 依赖
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# 构建输出
+dist/
+build/
+out/
+coverage/
+.nyc_output/
+
+# 环境变量
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+*.env
+
+# 敏感文件
+secrets/
+keys/
+*.key
+*.pem
+*.crt
+*.cert
+config/local.json
+config/private.json
+config/secrets.json
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 操作系统
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 测试输出
+test-results/
+screenshots/
+videos/
+
+# 日志
+*.log
+logs/
+
+# 临时文件
+.tmp/
+temp/
+tmp/
+
+# 包管理器
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# 类型声明缓存
+.tsbuildinfo
+
+# Jest缓存
+.jest-cache/
+
+# 技能特定
+user-config.json
+local-config.json
+debug-config.json

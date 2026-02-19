@@ -1,0 +1,156 @@
+{
+  "news": {
+    "sources": [
+      "local/rss/politics.xml",
+      "local/rss/tech.xml",
+      "local/rss/finance.xml"
+    ],
+    "keywords": [
+      "crypto",
+      "ETH",
+      "BTC",
+      "Binance",
+      "grid trading",
+      "market crash",
+      "regulation"
+    ],
+    "cache": {
+      "enabled": true,
+      "ttl": 3600,
+      "maxSize": 100
+    },
+    "alerts": {
+      "enabled": true,
+      "keywords": ["urgent", "breaking", "alert"],
+      "severity": "medium",
+      "notify": true
+    },
+    "api": {
+      "enabled": false,
+      "provider": "newsapi",
+      "apiKey": "",
+      "rateLimit": 100
+    }
+  },
+  "markets": {
+    "crypto": {
+      "enabled": true,
+      "symbols": ["ETH", "BTC", "SOL", "ADA"],
+      "interval": "1h",
+      "indicators": ["RSI", "MACD", "BB", "MA"],
+      "api": {
+        "provider": "coingecko",
+        "apiKey": "",
+        "cache": true
+      }
+    },
+    "stocks": {
+      "enabled": false,
+      "symbols": ["SPX", "NDX", "DJI"],
+      "interval": "1d",
+      "api": {
+        "provider": "alphavantage",
+        "apiKey": ""
+      }
+    },
+    "commodities": {
+      "enabled": false,
+      "symbols": ["GOLD", "OIL", "SILVER"],
+      "interval": "1d"
+    }
+  },
+  "analysis": {
+    "risk": {
+      "enabled": true,
+      "threshold": 0.7,
+      "confidence": 0.95,
+      "window": 30
+    },
+    "patterns": {
+      "enabled": true,
+      "types": ["head_shoulders", "double_top", "triangle", "wedge"],
+      "confidence": 0.8
+    },
+    "correlation": {
+      "enabled": true,
+      "window": 30,
+      "threshold": 0.5
+    },
+    "sentiment": {
+      "enabled": true,
+      "provider": "local",
+      "apiKey": ""
+    }
+  },
+  "reporting": {
+    "daily": {
+      "enabled": true,
+      "time": "09:00",
+      "format": "markdown",
+      "recipients": [],
+      "include": ["news", "markets", "analysis", "recommendations"]
+    },
+    "weekly": {
+      "enabled": true,
+      "day": "monday",
+      "time": "10:00",
+      "format": "html",
+      "recipients": [],
+      "include": ["summary", "trends", "performance", "outlook"]
+    },
+    "alerts": {
+      "enabled": true,
+      "channels": ["console", "email"],
+      "threshold": "high"
+    }
+  },
+  "gridTrading": {
+    "enabled": true,
+    "assets": ["ETH"],
+    "parameters": {
+      "lowerBound": 1800,
+      "upperBound": 2200,
+      "gridCount": 20,
+      "investment": 1000,
+      "takeProfit": 0.02,
+      "stopLoss": 0.05
+    },
+    "optimization": {
+      "enabled": true,
+      "method": "genetic",
+      "iterations": 100
+    }
+  },
+  "performance": {
+    "cache": {
+      "enabled": true,
+      "strategy": "lru",
+      "maxSize": 1000,
+      "ttl": 3600
+    },
+    "logging": {
+      "level": "info",
+      "format": "json",
+      "output": "console"
+    },
+    "monitoring": {
+      "enabled": true,
+      "metrics": ["responseTime", "errorRate", "cacheHitRate"]
+    }
+  },
+  "security": {
+    "apiKeys": {
+      "encrypt": true,
+      "rotation": 90
+    },
+    "rateLimiting": {
+      "enabled": true,
+      "requests": 100,
+      "window": 3600
+    },
+    "validation": {
+      "enabled": true,
+      "strict": false
+    }
+  }
+}
